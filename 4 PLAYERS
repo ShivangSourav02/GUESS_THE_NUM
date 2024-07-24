@@ -6,13 +6,13 @@ public class GuessTheNumber {
         Random rand = new Random();
         Scanner scanner = new Scanner(System.in);
 
-        // Generate four random numbers between 1 and 100
+        
         int num1 = rand.nextInt(100) + 1;
         int num2 = rand.nextInt(100) + 1;
         int num3 = rand.nextInt(100) + 1;
         int num4 = rand.nextInt(100) + 1;
 
-        // Select one of the four numbers as the correct number
+        
         int[] numbers = {num1, num2, num3, num4};
         int correctIndex = rand.nextInt(4);
         int correctNumber = numbers[correctIndex];
@@ -23,11 +23,11 @@ public class GuessTheNumber {
         System.out.println("3: " + num3);
         System.out.println("4: " + num4);
 
-        // Prompt the user to guess
+        
         System.out.print("Enter the number of your guess (1-4): ");
         int userGuess = scanner.nextInt();
 
-        // Check if the user's guess is correct
+        
         if (userGuess < 1 || userGuess > 4) {
             System.out.println("Invalid input. Please enter a number between 1 and 4.");
         } else if (numbers[userGuess - 1] == correctNumber) {
